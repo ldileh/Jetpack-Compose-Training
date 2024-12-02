@@ -13,6 +13,8 @@ espresso = "3.5.1"
 
 androidGradlePlugin = "8.1.2"
 kotlin = "1.9.10"
+composeViewmodel = "2.6.1"
+composeLifecycle = "2.6.2"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -33,6 +35,8 @@ espresso = { group = "androidx.test.espresso", name = "espresso-core", version.r
 junit-ui-test = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 compose-ui-testmanifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+compose-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "composeViewmodel" }
+compose-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "composeLifecycle" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }

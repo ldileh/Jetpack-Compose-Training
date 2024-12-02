@@ -1,6 +1,7 @@
-package com.example.jetpackcompose.ui.component
+package com.example.jetpackcompose.ui.component.common
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -13,7 +14,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.jetpackcompose.R
 import com.example.jetpackcompose.ui.listener.HeaderListener
@@ -29,13 +32,11 @@ fun Header(modifier: Modifier = Modifier, listener: HeaderListener){
         modifier = modifier
             .fillMaxWidth()
             .height(56.dp),
-        horizontalArrangement = Arrangement.SpaceBetween
+        horizontalArrangement = Arrangement.SpaceBetween,
     ) {
         Box(
             modifier = iconModifier
-                .clickable {
-                    listener.onClickBurgerMenu()
-                }
+                .clickable { listener.onClickBurgerMenu() }
                 .padding(4.dp)
         ) {
             Image(
@@ -47,9 +48,7 @@ fun Header(modifier: Modifier = Modifier, listener: HeaderListener){
 
         Box(
             modifier = iconModifier
-                .clickable {
-                    listener.onClickSearchMenu("")
-                }
+                .clickable { listener.onClickSearchMenu("") }
                 .padding(8.dp)
         ) {
             Image(
@@ -59,4 +58,19 @@ fun Header(modifier: Modifier = Modifier, listener: HeaderListener){
             )
         }
     }
+}
+
+@Preview
+@Composable
+private fun PreviewHeader() {
+    Header(listener = object : HeaderListener {
+        override fun onClickBurgerMenu() {
+        }
+
+        override fun onClickSearchMenu(searchValue: String) {
+        }
+
+        override fun onCategorySelected(category: String) {
+        }
+    })
 }

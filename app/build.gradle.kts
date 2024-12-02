@@ -63,6 +63,8 @@ dependencies {
     implementation(libs.compose.ui.toolingpreview)
     implementation(libs.compose.material3)
     implementation(libs.compose.constraintlayout)
+    implementation(libs.compose.viewmodel)
+    implementation(libs.compose.lifecycle)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidtest.junit)

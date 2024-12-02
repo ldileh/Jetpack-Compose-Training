@@ -4,4 +4,5 @@ interface HeaderListener {
 
     fun onClickBurgerMenu()
     fun onClickSearchMenu(searchValue: String)
+    fun onCategorySelected(category: String)
 }
